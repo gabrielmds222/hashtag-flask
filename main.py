@@ -14,7 +14,7 @@ def homepage():
 @app.route('/contatos')
 
 def contatos():
-    return "Contatos do site: gabrielmedsilva@outlook.com"
+    return "<p>Contatos do site:</p> <p>gabrielmedsilva@outlook.com</p>"
 # Colocar o site no ar
 if __name__ == '__main__':
     app.run(debug=True)
