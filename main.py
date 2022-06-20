@@ -9,6 +9,12 @@ app = Flask(__name__)
 # Função => O que vai ser exibido na tela
 
 def homepage():
-    return "Home do site"
+    return "Home do site, teste do debug oppa"
+
+@app.route('/contatos')
+
+def contatos():
+    return "Contatos do site: gabrielmedsilva@outlook.com"
 # Colocar o site no ar
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
