@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -9,12 +9,12 @@ app = Flask(__name__)
 # Função => O que vai ser exibido na tela
 
 def homepage():
-    return "Home do site, teste do debug oppa"
+    return render_template('homepage.html')
 
 @app.route('/contatos')
 
 def contatos():
-    return "<p>Contatos do site:</p> <p>gabrielmedsilva@outlook.com</p>"
+    return render_template('contatos.html')
 # Colocar o site no ar
 if __name__ == '__main__':
     app.run(debug=True)
