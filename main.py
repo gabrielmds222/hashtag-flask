@@ -15,6 +15,12 @@ def homepage():
 
 def contatos():
     return render_template('contatos.html')
+
+@app.route('/user/<username>')
+
+def user(username):
+    return username
+
 # Colocar o site no ar
 if __name__ == '__main__':
     app.run(debug=True)
